@@ -1,0 +1,54 @@
+---
+id: electron-ptychography
+sidebar_position: 3
+title: Electron Ptychography
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import STEMSchematic from '@site/static/img/4DSTEM_defocused_looping.gif';
+import EpieComponent from '@site/src/components/EpieComponent.js';
+
+<Tabs>
+
+<TabItem value="4dstem" label="4D Scanning Transmission Electron Microscopy" default>
+
+- Focused electron beam scanned across sample
+  - 2D diffraction intensities collected at each 2D scan position &rarr; "4D-STEM"
+
+<figure>
+  <img src={STEMSchematic} alt="4DSTEM Schematic" width="50%" height="auto"/>
+</figure>
+
+</TabItem>
+
+<TabItem value="ptychography" label="Electron Ptychography">
+
+- Each diffraction pattern &rarr; non-convex set
+  - Problem: reconstruct probe $\hat{\mathcal{P}}$ and object $\hat{\mathcal{O}}$ from diffraction intensities $I$
+
+$$
+\begin{aligned}
+  \psi_j(\boldsymbol{r}) &= \hat{\mathcal{P}}(\boldsymbol{r}) \times \hat{\mathcal{O}}(\boldsymbol{r}-\boldsymbol{R}_j) \\
+  I_j(\boldsymbol{k}) &= \left| \mathcal{F}\left[\psi_j(\boldsymbol{r})\right]\right|^2
+\end{aligned}
+$$
+
+- Rich literature of reconstruction algorithms:
+  - "Fourier" projection
+    - Reconstructed probe and object accurately reproduce measured intensities
+  - "Overlap" projection
+    - Reconstructed probe and object are self-consistent with adjacent scanning positions
+
+<details>
+  <summary> Interactive Ptychography Simulation </summary>
+    <EpieComponent />
+</details>
+
+</TabItem>
+
+</Tabs>
+

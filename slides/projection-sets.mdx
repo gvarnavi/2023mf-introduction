@@ -1,0 +1,46 @@
+---
+id: projection-sets
+sidebar_position: 2
+title: Projection Set Algorithms
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import TwoConvexSetsComponent from '@site/src/components/TwoConvexSetsComponent.js';
+import TwoNonconvexSetsComponent from '@site/src/components/TwoNonconvexSetsComponent.js';
+import FlowerSetsComponent from '@site/src/components/FlowerSetsComponent.js';
+
+## Projection Set Algorithms
+
+<ul>
+  <li> Proximal gradient methods are a powerful technique to solve non-convex inverse problems </li>
+  <li> Problem: find the intersection of two sets </li>
+    <ul>
+      <li> Catch: only allowed to operate on one set a time </li>
+    </ul>
+</ul>
+
+<Tabs Lazy>
+  <TabItem value="two-convex-sets" label="Two Convex Sets" default>
+  <ul>
+    <li> Two convex sets &rarr; "alternating projections" guaranteed to converge </li>
+  </ul>
+    <TwoConvexSetsComponent />
+  </TabItem>
+  <TabItem value="two-nonconvex-sets" label="Two Non-convex Sets">
+  <ul>
+    <li> Two non-convex sets &rarr; "generalized projections" show more robust convergence </li>
+  </ul>
+    <TwoNonconvexSetsComponent />
+  </TabItem>
+  <TabItem value="multiple-sets" label="Multiple Non-convex Sets">
+  <ul>
+    <li> Multiple non-convex sets &rarr; require consistency across parallel projections </li>
+  </ul>
+    <FlowerSetsComponent />
+  </TabItem>
+</Tabs>
+

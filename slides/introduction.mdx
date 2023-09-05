@@ -1,0 +1,87 @@
+---
+id: introduction
+sidebar_position: 1
+title: Introduction
+hide_table_of_contents: true
+hide_title: true
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import SudokuImage01 from '@site/static/img/sudoku-frame-purple-01.png';
+import SudokuImage02 from '@site/static/img/sudoku-frame-purple-02.png';
+import SudokuImage03 from '@site/static/img/sudoku-frame-purple-03.png';
+import SudokuImage04 from '@site/static/img/sudoku-frame-purple-04.png';
+import SudokuImage05 from '@site/static/img/sudoku-frame-purple-05.png';
+import SudokuImageGIF from '@site/static/img/sudoku-frames-purple-infinite.gif';
+
+## Who am I? (abridged version)
+
+<ul>
+  <li> Name is pronounced Yeh-or-yee-os, but I'll accept George(ous) </li>
+  <li> Born and raised in Cyprus, before heading to Boston for (u)grad </li>
+  <li> Into musical theatre, camping, and <a href="https://gvarnavides.com/musings/generative-art/">generative art</a> </li>
+</ul>
+
+<ul>
+  <li> 2nd year Miller fellow </li>
+    <ul>
+      <li> Co-hosted by Prof. Mary Scott (MSE) and Prof. Joel Moore (Physics) </li>
+    </ul>
+  <li> Interested in imaging fields (temperature, magnetization, current density) inside materials w/ high resolution </li>
+    <ul>
+      <li> This is a high-dimensional, non-convex, inverse problem </li>
+    </ul>
+</ul>
+
+<details>
+  <summary> Non-convex inverse problems (aka Sudoku for dummies) </summary>
+
+  <ul>
+    <li> Sudoku is a constraint satisfaction problem:</li>
+      <ul>
+        <li> Each row contains only one of each of the numbers 1-9 </li>
+        <li> Each column contains only one of each of the numbers 1-9 </li>
+        <li> Each 3x3 block contains only one of each of the numbers 1-9 </li>
+        <li> Solution must be consistent with a (minimum) set of pre-defined clues </li>
+      </ul>
+    <li> Each constraint can be interpreted as a projection to a non-convex set </li>
+    <li> This can now be solved using iterative proximal gradient algorithms </li>
+  </ul>
+
+  <Tabs>
+    <TabItem value="iteration 01" label="iteration 01" default>
+      <figure>
+	<img src={SudokuImage01} alt="Sudoku Solution 01" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+    <TabItem value="iteration 02" label="iteration 02">
+      <figure>
+	<img src={SudokuImage02} alt="Sudoku Solution 02" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+    <TabItem value="iteration 03" label="iteration 03">
+      <figure>
+	<img src={SudokuImage03} alt="Sudoku Solution 03" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+    <TabItem value="iteration 04" label="iteration 04">
+      <figure>
+	<img src={SudokuImage04} alt="Sudoku Solution 04" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+    <TabItem value="iteration 05" label="iteration 05">
+      <figure>
+	<img src={SudokuImage05} alt="Sudoku Solution 05" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+    <TabItem value="solution gif" label="animated solution">
+      <figure>
+	<img src={SudokuImageGIF} alt="Sudoku Solution GIF" width="100%" height="auto"/>
+      </figure>
+    </TabItem>
+  </Tabs>
+
+</details>
+
